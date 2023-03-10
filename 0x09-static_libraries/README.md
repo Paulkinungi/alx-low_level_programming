@@ -9,3 +9,22 @@ steps for the project tasks
 copy all .o files to the library libmy.a using  the code(ar rcs libmy.a *.0)
 run the code (ar -t libmy.a ) to confirm all.o files are in the library
 run the second code to confirm by comparing the displayed codes
+
+
+task_2
+-create "create_static_lib.sh" file
+-enter this code into the file and save   #!/bin/bash
+gcc -Wall -pedantic -Werror -Wextra -c *.c
+ar -rc liball.a *.o
+ranlib liball.a 
+
+-make the file executable using :
+"chmod u+x create_static_lib.sh"
+-run the file using the function:
+"./create_static_lib.sh" >> it causes the file liball.a to appear
+-confirm liball.a is presennt using:
+"ls *.a"
+
+git add .
+git commit -m "message"
+git push
